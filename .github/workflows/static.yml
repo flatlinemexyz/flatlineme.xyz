@@ -1,0 +1,109 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Insert your code below this line
+      - name: Add HTML and CSS files
+        run: |
+          echo '<!-- flatlineme.xyz -->' > index.html
+          echo '<link rel="stylesheet" href="flatlineme.xyz1">' >> index.html
+          echo '<div class="container">' >> index.html
+          echo '  <h1>Welcome to FlatlineMe</h1>' >> index.html
+          echo '  <p>Choose an option:</p>' >> index.html
+          echo '  <a href="https://example.com/link1" class="button">Button 1</a>' >> index.html
+          echo '  <a href="https://example.com/link2" class="button">Button 2</a>' >> index.html
+          echo '</div>' >> index.html
+          echo '<!-- End of flatlineme.xyz -->' >> index.html
+
+          echo '/* Stylesheet styles.css */' > flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '/* Typography */' >> flatlineme.xyz1
+          echo 'body {' >> flatlineme.xyz1
+          echo '  font-family: Arial, sans-serif;' >> flatlineme.xyz1
+          echo '  font-size: 16px;' >> flatlineme.xyz1
+          echo '  line-height: 1.6;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo 'h1, h2, h3 {' >> flatlineme.xyz1
+          echo '  font-family: "Helvetica", sans-serif;' >> flatlineme.xyz1
+          echo '  color: #333;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '/* Colors */' >> flatlineme.xyz1
+          echo 'body {' >> flatlineme.xyz1
+          echo '  background-color: #f8f8f8;' >> flatlineme.xyz1
+          echo '  color: #333;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '/* Layout */' >> flatlineme.xyz1
+          echo '.container {' >> flatlineme.xyz1
+          echo '  width: 80%;' >> flatlineme.xyz1
+          echo '  margin: 0 auto;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '/* Navigation */' >> flatlineme.xyz1
+          echo '.navbar {' >> flatlineme.xyz1
+          echo '  background-color: #333;' >> flatlineme.xyz1
+          echo '  color: #fff;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '.navbar ul {' >> flatlineme.xyz1
+          echo '  list-style-type: none;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '.navbar li {' >> flatlineme.xyz1
+          echo '  display: inline-block;' >> flatlineme.xyz1
+          echo '  margin-right: 20px;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '.navbar a {' >> flatlineme.xyz1
+          echo '  text-decoration: none;' >> flatlineme.xyz1
+          echo '  color: #fff;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '' >> flatlineme.xyz1
+          echo '.navbar a:hover {' >> flatlineme.xyz1
+          echo '  color: #ff0;' >> flatlineme.xyz1
+          echo '}' >> flatlineme.xyz1
+          echo '/* End of flatlineme.xyz */' >> flatlineme.xyz1
+      # End of your code
+
