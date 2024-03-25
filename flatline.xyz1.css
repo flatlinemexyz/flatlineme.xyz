@@ -1,0 +1,56 @@
+/* flatlineme.xyz */
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+  }
+  
+  /* Colors */
+  body {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Layout */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navbar a:hover {
+    color: #ff0;
+  }
+  
+  /* Stylesheet styles.css */
+  
+  /* Add the CSS code from flatlineme.xyz1 here */
+  
+  /* End of flatlineme.xyz */
+  
