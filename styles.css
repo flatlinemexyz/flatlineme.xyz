@@ -1,41 +1,49 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f8f9fa; /* Light gray background */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #343a40; /* Dark background for header */
+    color: #fff; /* White text color */
     padding: 20px;
     text-align: center;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Large font size for heading */
+    margin-bottom: 20px; /* Add some space below the heading */
 }
 
 main {
-    padding: 20px;
+    text-align: center; /* Center-align text inside the main section */
 }
 
 section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* White background for main section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
     padding: 20px;
+    display: inline-block; /* Display as inline-block to center it */
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+a.button {
+    display: inline-block; /* Display as inline-block */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-a:hover {
-    text-decoration: underline;
+a.button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+span.highlight {
+    color: #007bff; /* Blue color for highlighted text */
+    font-weight: bold; /* Bold text */
 }
