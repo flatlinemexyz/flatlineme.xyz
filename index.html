@@ -5,28 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flatlineme.xyz</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://cdn.discordapp.com/attachments/1187505620153286766/1221962779255242802/1711409027205.gif?ex=66147c85&is=66020785&hm=a6e3e5929574c6a58ea228463110ca9a1f74a3dd31eed64f00127d2cc0bb4572');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-image: url('https://cdn.discordapp.com/banners/1187501711485587488/a_e3e8e601e87ad0d88dc6262ec48e5927.gif?size=1024&width=0&height=256');
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for main section */
+            color: #fff; /* White text color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-box {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for profile box */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .username {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .tag {
+            color: #999;
+            margin-top: 0;
+        }
+
+        .status {
+            color: #43b581;
+            margin-top: 10px;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        a.button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 70vh;
+            border: none;
+        }
+
+        .music-player {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .music-player iframe {
+            width: 300px;
+            height: 80px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; height: 100vh; background-image: url('https://cdn.discordapp.com/attachments/1187505620153286766/1221962779255242802/1711409027205.gif?ex=66147c85&is=66020785&hm=a6e3e5929574c6a58ea228463110ca9a1f74a3dd31eed64f00127d2cc0bb4572'); background-size: cover; background-position: center;">
-    <header style="background-image: url('https://cdn.discordapp.com/banners/1187501711485587488/a_e3e8e601e87ad0d88dc6262ec48e5927.gif?size=1024&width=0&height=256'); background-size: cover; background-position: center; color: #fff; padding: 20px; text-align: center; width: 100%;">
+<body>
+    <header>
         <h1>Welcome to Flatlineme.xyz</h1>
+        <p>Your ultimate destination for music and fun!</p>
     </header>
-    <main style="text-align: center; margin-top: 20px;">
-        <section style="background-color: rgba(0, 0, 0, 0.5); color: #fff; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
-            <div style="background-color: #000; display: flex; align-items: center; justify-content: center; border-radius: 10px; padding: 20px; margin: 20px 0;">
-                <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin-right: 20px;">
-                    <img src="https://cdn.discordapp.com/avatars/1187501711485587488/f75b953c7347ec3a01ced679d1b61453.webp?size=4096" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
+    <main>
+        <section>
+            <div class="profile-box">
+                <div class="avatar">
+                    <img src="https://cdn.discordapp.com/avatars/1187501711485587488/f75b953c7347ec3a01ced679d1b61453.webp?size=4096" alt="Profile Picture">
                 </div>
-                <div style="text-align: left;">
-                    <p style="font-size: 1.5em; font-weight: bold; color: #fff;">Flatline</p>
-                    <p style="color: #999; margin-top: 5px;">#1234</p>
-                    <p style="color: #43b581; margin-top: 10px;">Online</p>
-                    <a href="https://discord.com/users/1187501711485587488" style="display: inline-block; background-color: #000; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease; margin-top: 15px;" class="btn btn-primary">View Profile</a>
+                <div class="profile-info">
+                    <p class="username">Flatline</p>
+                    <p class="tag">#1234</p>
+                    <p class="status">Online</p>
+                    <a href="https://discord.com/users/1187501711485587488" class="button">View Profile</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.8); padding: 10px; text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KTtYNrlM8wc" frameborder="0" allowfullscreen></iframe>
+    <footer>
+        <div class="music-player">
+            <iframe src="https://www.youtube.com/embed/S0sPIb0k_Hw?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="music-player">
+            <iframe src="https://www.youtube.com/embed/KTtYNrlM8wc?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
     </footer>
 </body>
 </html>
