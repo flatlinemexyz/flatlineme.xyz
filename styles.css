@@ -3,7 +3,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    background: #000; /* Entire background is black */
+    background-color: #000; /* Entire background is black */
 }
 
 header {
@@ -27,4 +27,39 @@ header {
     100% { color: #ff00ff; }
 }
 
-/* Rest of your CSS styles */
+.profile-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #7289DA; /* Discord brand color */
+}
+
+.profile-name {
+    font-size: 2em;
+    color: #7289DA; /* Discord brand color */
+}
+
+.profile-tag {
+    font-size: 1.5em;
+    color: #7289DA; /* Discord brand color */
+}
+
+.profile-link {
+    display: inline-block;
+    background-color: #7289DA; /* Discord brand color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.profile-link:hover {
+    background-color: #5865F2; /* Slightly lighter Discord blue */
+}
