@@ -3,14 +3,14 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    background: #000; /* Set entire background to black */
+    background: #000; /* Entire background set to black */
     min-height: 100vh;
 }
 
 header {
     width: 100%;
     overflow: hidden;
-    height: 256px; /* Banner height */
+    height: 256px; /* Height adjusted to banner size */
 }
 
 .banner-img {
@@ -19,25 +19,22 @@ header {
     object-fit: cover;
 }
 
-h1 {
-    display: none; /* Hide the default header text */
-}
-
 main {
     text-align: center;
     padding: 20px 0;
 }
 
 .profile-section {
-    background-color: #000; /* Set background to black for uniformity */
+    background-color: #000; /* Background of profile section specifically set to black */
     border-radius: 10px;
     padding: 20px;
     margin: auto;
     max-width: 600px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow for depth */
 }
 
 .profile-img {
-    width: 256px; /* Match the Discord profile picture size */
+    width: 256px; /* Adjusted to match Discord profile pic size */
     height: 256px;
     border-radius: 50%;
     overflow: hidden;
@@ -59,7 +56,7 @@ main {
 .profile-status {
     font-size: 1.5em;
     margin-bottom: 5px;
-    color: #fff; /* Ensure text is white for visibility */
+    color: #fff; /* Text color set to white for visibility */
 }
 
 .profile-link {
