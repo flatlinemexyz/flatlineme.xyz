@@ -36,6 +36,14 @@ main {
     padding: 20px;
     margin: auto;
     max-width: 600px;
+    animation: colorChange 10s infinite;
+}
+
+@keyframes colorChange {
+    0%, 100% { background-color: rgba(0, 0, 0, 0.6); }
+    25% { background-color: rgba(255, 0, 0, 0.6); }
+    50% { background-color: rgba(0, 255, 0, 0.6); }
+    75% { background-color: rgba(0, 0, 255, 0.6); }
 }
 
 .profile-img {
@@ -83,4 +91,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
