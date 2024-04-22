@@ -63,3 +63,8 @@ header {
 .profile-link:hover {
     background-color: #5865F2; /* Slightly lighter Discord blue */
 }
+
+/* Center the button in the footer */
+footer {
+    text-align: center;
+}
