@@ -67,4 +67,5 @@ header {
 /* Center the button in the footer */
 footer {
     text-align: center;
+    margin-top: 20px; /* Add some top margin for spacing */
 }
