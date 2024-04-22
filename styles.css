@@ -3,8 +3,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    background: url('https://cdn.discordapp.com/attachments/1187505620153286766/1221962779255242802/1711409027205.gif') no-repeat center center;
-    background-size: cover;
+    background: #000; /* Set entire background to black */
     min-height: 100vh;
 }
 
@@ -30,13 +29,11 @@ main {
 }
 
 .profile-section {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #000; /* Set background to black for uniformity */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: auto;
     max-width: 600px;
-    animation: colorChange 10s infinite;
 }
 
 .profile-img {
@@ -62,6 +59,7 @@ main {
 .profile-status {
     font-size: 1.5em;
     margin-bottom: 5px;
+    color: #fff; /* Ensure text is white for visibility */
 }
 
 .profile-link {
@@ -76,6 +74,11 @@ main {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000; /* Footer background set to black */
     padding: 10px;
-    text-align: center
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff; /* Footer text color */
+}
