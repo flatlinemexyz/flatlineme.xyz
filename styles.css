@@ -8,79 +8,23 @@ body {
 
 header {
     width: 100%;
-    height: 256px;
+    height: 100px;
     overflow: hidden;
 }
 
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-main {
+.header-text {
     text-align: center;
-    padding: 20px 0;
+    font-size: 3em;
+    line-height: 100px; /* Vertically center the text */
+    animation: colorChange 0.5s infinite; /* Rapid color change animation */
 }
 
-.profile-section {
-    background-color: #000;
-    border-radius: 10px;
-    padding: 20px;
-    margin: auto;
-    max-width: 600px;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Neon green shadow */
+@keyframes colorChange {
+    0% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ffff00; }
+    100% { color: #ff00ff; }
 }
 
-.profile-img {
-    width: 256px;
-    height: 256px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 20px auto;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Neon green glow */
-}
-
-.profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-info {
-    text-align: center;
-}
-
-.profile-name,
-.profile-tag,
-.profile-status {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: #00FF00; /* Neon green text */
-}
-
-.profile-link {
-    display: inline-block;
-    background-color: #7289DA; /* Discord brand color */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Neon green glow on hover */
-}
-
-.profile-link:hover {
-    background-color: #5865F2; /* Slightly lighter Discord blue */
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.9);
-}
-
-footer {
-    background-color: #000;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: #fff;
-}
+/* Rest of your CSS styles */
