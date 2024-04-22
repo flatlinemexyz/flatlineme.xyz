@@ -8,8 +8,8 @@ function changeBackgroundColor() {
     currentColorIndex = (currentColorIndex + 1) % colors.length;
 }
 
-// Set initial background color to black
-changeBackgroundColor();
+// Change background color every 500 milliseconds
+setInterval(changeBackgroundColor, 500);
 
-// Change background color every 1 second
-setInterval(changeBackgroundColor, 1000);
+// Set initial background color to black
+mainArea.style.backgroundColor = '#000';
