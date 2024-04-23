@@ -1,9 +1,12 @@
-// Define a function to change the text color randomly
-function changeTextColor() {
+// Initialize dynamic effects when the document is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
     const headerText = document.querySelector('.header-text');
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // Generate a random hex color
-    headerText.style.color = randomColor; // Apply the random color to the header text
-}
 
-// Call the function repeatedly to change text color rapidly
-setInterval(changeTextColor, 200); // Change color every 200 milliseconds
+    function changeTextColor() {
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        headerText.style.transition = 'color 1s ease-in-out'; // Smooth transition
+        headerText.style.color = randomColor;
+    }
+
+    setInterval(changeTextColor, 2000); // Change color every 2000 milliseconds
+});
