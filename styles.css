@@ -1,17 +1,22 @@
 body {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewport="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="white" stroke-width="1.5" fill="none" /><line x1="16" y1="8" x2="16" y2="24" stroke="white" stroke-width="1.5"/><line x1="8" y1="16" x2="24" y2="16" stroke="white" stroke-width="1.5"/></svg>'), auto;
 }
 
-/* Header styles */
 header {
     text-align: center;
     padding: 50px 0;
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .profile-section {
     margin-top: 30px;
     position: relative;
+}
+
+.profile-banner, .profile-picture {
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .profile-banner {
@@ -31,17 +36,15 @@ header {
     left: calc(50% - 75px);
 }
 
-.profile-name {
+.profile-name, .profile-tag {
     font-size: 2em;
     margin-top: 10px;
 }
 
 .profile-tag {
-    font-size: 1.5em;
     color: #7289DA; /* Discord theme color */
 }
 
-/* Main section styles */
 main {
     text-align: center;
     padding: 30px 0;
@@ -49,25 +52,6 @@ main {
 
 .about-section, .youtube-section {
     margin-bottom: 50px;
-    animation: changeColor 5s infinite alternate; /* Color changing animation */
-}
-
-@keyframes changeColor {
-    0% {
-        color: #ff5555; /* Red */
-    }
-    25% {
-        color: #55ff55; /* Green */
-    }
-    50% {
-        color: #5555ff; /* Blue */
-    }
-    75% {
-        color: #ffff55; /* Yellow */
-    }
-    100% {
-        color: #ff55ff; /* Purple */
-    }
 }
 
 .about-section h2, .youtube-section h2 {
@@ -78,7 +62,6 @@ main {
     font-size: 1.2em;
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -86,4 +69,10 @@ footer {
 
 footer p {
     font-size: 1.2em;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7); }
+    100% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
 }
