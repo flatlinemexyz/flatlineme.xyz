@@ -1,16 +1,18 @@
 body {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewport="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="white" stroke-width="1.5" fill="none" /><line x1="16" y1="8" x2="16" y2="24" stroke="white" stroke-width="1.5"/><line x1="8" y1="16" x2="24" y2="16" stroke="white" stroke-width="1.5"/></svg>'), auto;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     text-align: center;
-    padding: 50px 0;
+    padding: 5% 0;
 }
 
 .profile-section {
-    margin-top: 30px;
+    margin-top: 3%;
     position: relative;
 }
 
@@ -19,38 +21,42 @@ header {
 }
 
 .profile-banner {
-    width: 100%;
-    height: 200px;
+    width: 67%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 20%;
+    max-width: 150px;
+    height: auto;
     border-radius: 50%;
-    border: 5px solid #7289DA; /* Discord theme color */
+    border: 5px solid #7289DA;
     position: absolute;
-    top: 150px;
-    left: calc(50% - 75px);
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .profile-name, .profile-tag {
     font-size: 2em;
-    margin-top: 10px;
+    margin-top: 5%;
 }
 
 .profile-tag {
-    color: #7289DA; /* Discord theme color */
+    color: #7289DA;
+    margin-top: 5cm;
 }
 
 main {
     text-align: center;
-    padding: 30px 0;
+    padding: 3% 0;
 }
 
 .about-section, .youtube-section {
-    margin-bottom: 50px;
+    margin-bottom: 5%;
 }
 
 .about-section h2, .youtube-section h2 {
@@ -63,12 +69,23 @@ main {
 
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 3% 0;
 }
 
 footer p {
     font-size: 1.2em;
     animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes rgbEffect {
+    0% { color: red; }
+    33% { color: green; }
+    67% { color: blue; }
+    100% { color: red; }
+}
+
+.header-text, .profile-name {
+    animation: rgbEffect 6s linear infinite;
 }
 
 @keyframes pulse {
