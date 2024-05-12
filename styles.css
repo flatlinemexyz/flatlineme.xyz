@@ -21,16 +21,13 @@ header {
     position: relative;
 }
 
-.profile-banner, .profile-picture {
-    animation: pulse 2s infinite ease-in-out;
-}
-
 .profile-banner {
     width: 67%;
     max-width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .profile-picture {
@@ -43,6 +40,7 @@ header {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: pulseblue 2s infinite ease-in-out;
 }
 
 .profile-name, .profile-tag {
@@ -96,4 +94,9 @@ footer p {
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7); }
     100% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+}
+
+@keyframes pulseblue {
+    0% { box-shadow: 0 0 0 0px rgba(114, 137, 218, 0.7); }
+    100% { box-shadow: 0 0 0 20px rgba(255, 0, 0, 0); }
 }
