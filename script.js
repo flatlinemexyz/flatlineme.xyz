@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Redirect button functionality
     const failedButton = document.getElementById('failed-button');
     failedButton.addEventListener('click', () => {
-        window.location.href = '/failed.html';
+        window.location.href = 'https://flatlineme.xyz/failed.html';
     });
 });
