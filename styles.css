@@ -100,3 +100,23 @@ footer p {
     0% { box-shadow: 0 0 0 0px rgba(114, 137, 218, 0.7); }
     100% { box-shadow: 0 0 0 20px rgba(255, 0, 0, 0); }
 }
+
+/* Styles for the new button */
+.failed-section {
+    margin-top: 5%;
+}
+
+#failed-button {
+    background-color: #7289DA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#failed-button:hover {
+    background-color: #5a6cae;
+}
