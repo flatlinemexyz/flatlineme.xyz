@@ -26,6 +26,12 @@
         body {
             background-color: black;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
         .header-text, .failed-list-section, footer {
             color: white;
@@ -33,23 +39,42 @@
         a {
             color: lightblue;
         }
+        .content {
+            text-align: center;
+        }
+        .content h2 {
+            margin-bottom: 20px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content li {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        footer p {
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="header-text">Failed C2 Attacks</h1>
-    </header>
-    <main>
-        <section class="failed-list-section">
-            <h2>List of Failed C2 Attacks</h2>
-            <ul>
-                <li style="font-weight: bold; font-size: 1.5em;">ToxicityC2 - 1.1M requests</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Return to <a href="index.html">Home</a></p>
-    </footer>
+    <div class="content">
+        <header>
+            <h1 class="header-text">Failed C2 Attacks</h1>
+        </header>
+        <main>
+            <section class="failed-list-section">
+                <h2>List of Failed C2 Attacks</h2>
+                <ul>
+                    <li>ToxicityC2 - 1.1M requests</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Return to <a href="index.html">Home</a></p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
