@@ -120,3 +120,41 @@ footer p {
 #failed-button:hover {
     background-color: #5a6cae;
 }
+
+/* Additional styles for failed.html page */
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content li {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.rainbow-text {
+    font-weight: bold;
+    font-size: 1.5em;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 3s infinite;
+}
+
+@keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+footer p {
+    margin-top: 40px;
+}
