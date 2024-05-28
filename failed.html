@@ -53,6 +53,19 @@
             font-weight: bold;
             font-size: 1.5em;
         }
+        .rainbow-text {
+            font-weight: bold;
+            font-size: 1.5em;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow-animation 3s infinite;
+        }
+        @keyframes rainbow-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         footer p {
             margin-top: 40px;
         }
@@ -67,7 +80,7 @@
             <section class="failed-list-section">
                 <h2>List of Failed C2 Attacks</h2>
                 <ul>
-                    <li>ToxicityC2 - 1.1M requests</li>
+                    <li class="rainbow-text">ToxicityC2 - 1.1M requests</li>
                 </ul>
             </section>
         </main>
