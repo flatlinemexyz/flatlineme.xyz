@@ -42,7 +42,7 @@
         }
     </style>
 </head>
-<body onclick="playAudio()">
+<body>
     <audio id="bgMusic" src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" loop></audio>
     <div class="container">
         <h1>Access Denied</h1>
@@ -50,11 +50,11 @@
         <p>If you believe this is a mistake, please <a href="mailto:support@flatlineme.xyz">contact support</a>.</p>
     </div>
     <script>
-        function playAudio() {
+        document.addEventListener("click", function() {
             var audio = document.getElementById("bgMusic");
             audio.play();
-            document.body.removeEventListener("click", playAudio); // Remove the event listener after the first click
-        }
+            document.removeEventListener("click", this);
+        });
     </script>
 </body>
 </html>
