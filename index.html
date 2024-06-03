@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Explore my personal website to learn more about me, my YouTube channel, and how to connect on Discord.">
     <meta name="twitter:image" content="banner.gif">
 </head>
-<body>
+<body onclick="playAudio()">
     <header>
         <h1 class="header-text">Welcome to Flatlineme.xyz</h1>
         <div class="profile-section">
@@ -54,18 +54,14 @@
     <footer>
         <p>Add me on Discord: Flatline#0000</p> <!-- FPSFIGHTER WAS HERE :? -->
     </footer>
-    <audio id="background-music" src="BlocBoy_JB_Drake-Look_Alive_Lyrics.mp3" preload="auto"></audio>
+    <audio id="bgMusic" src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" loop></audio>
     <script>
-        document.addEventListener('click', function() {
-            var audio = document.getElementById('background-music');
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-                audio.currentTime = 0;
-                audio.play();
-            }
-        });
+        function playAudio() {
+            var audio = document.getElementById("bgMusic");
+            audio.play();
+            // Remove the event listener after the first click
+            document.body.removeEventListener("click", playAudio);
+        }
     </script>
 </body>
 </html>
