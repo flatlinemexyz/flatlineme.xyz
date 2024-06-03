@@ -37,14 +37,25 @@
             text-decoration: none;
             font-weight: bold;
         }
+        audio {
+            display: none; /* Hide the audio player */
+        }
     </style>
 </head>
 <body>
-    <audio src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" autoplay loop></audio>
+    <audio id="bgMusic" src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" loop></audio>
     <div class="container">
         <h1>Access Denied</h1>
         <p>Your IP address has been blocked from accessing this site.</p>
         <p>If you believe this is a mistake, please <a href="mailto:support@flatlineme.xyz">contact support</a>.</p>
+        <button onclick="playAudio()">Play Background Music</button>
     </div>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("bgMusic");
+            audio.play();
+            document.querySelector("button").style.display = "none"; // Hide the button after clicking
+        }
+    </script>
 </body>
 </html>
