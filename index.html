@@ -54,6 +54,18 @@
     <footer>
         <p>Add me on Discord: Flatline#0000</p> <!-- FPSFIGHTER WAS HERE :? -->
     </footer>
-    <script src="script.js"></script>
+    <audio id="background-music" src="BlocBoy_JB_Drake-Look_Alive_Lyrics.mp3" preload="auto"></audio>
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play();
+            }
+        });
+    </script>
 </body>
 </html>
