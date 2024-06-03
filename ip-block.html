@@ -48,20 +48,13 @@
         <h1>Access Denied</h1>
         <p>Your IP address has been blocked from accessing this site.</p>
         <p>If you believe this is a mistake, please <a href="mailto:support@flatlineme.xyz">contact support</a>.</p>
-        <button id="playButton" style="display: none;" onclick="playAudio()">Play Background Music</button>
     </div>
     <script>
         document.addEventListener("click", function() {
-            var button = document.getElementById("playButton");
-            button.style.display = "block";
-            button.click();
-            button.style.display = "none"; // Hide the button after clicking
-        });
-
-        function playAudio() {
             var audio = document.getElementById("bgMusic");
             audio.play();
-        }
+            document.removeEventListener("click", this); // Remove the event listener after the first click
+        });
     </script>
 </body>
 </html>
