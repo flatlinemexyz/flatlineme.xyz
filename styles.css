@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #000; /* Set background color to pure black */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #000; /* Set background color to pure black */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -22,14 +22,6 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-}
-
-.profile-banner {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .profile-info {
@@ -82,8 +74,6 @@ h2 {
 
 .failed-section button {
     background-color: #333;
-    color.failed-section button {
-    background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -105,7 +95,7 @@ h2 {
     margin: 0;
 }
 
-.failed-list li {
+.failed-list li.failed-list li {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
@@ -124,33 +114,4 @@ footer {
 
 audio {
     display: none;
-}
-
-**JavaScript Code (in script.js file):**
-```javascript
-let failedButton = document.getElementById('failed-button');
-let failedList = document.querySelector('.failed-list');
-
-failedButton.addEventListener('click', () => {
-    failedList.style.display = 'block';
-    failedButton.style.display = 'none';
-});
-
-document.addEventListener('click', (e) => {
-    if (e.target !== failedButton && e.target !== failedList) {
-        failedList.style.display = 'none';
-        failedButton.style.display = 'block';
-    }
-});
-
-let bgMusic = document.getElementById('bgMusic');
-
-document.body.addEventListener('click', () => {
-    bgMusic.play();
-    document.body.removeEventListener('click', playAudio);
-});
-
-function playAudio() {
-    bgMusic.play();
-    document.body.removeEventListener('click', playAudio);
 }
