@@ -198,15 +198,22 @@
         </div>
     </div>
     <footer>
-        <p>Add me on Discord: Flatlineme</p>
+        <p>Add me on Discord: Flatline#0000</p>
     </footer>
-    <audio id="bgMusic" src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" loop></audio>
-    <script src="script.js"></script>
+    <audio id="bgMusic" src="BlocBoy JB, Drake - Look Alive (Lyrics).mp3" loop autoplay></audio>
     <script>
         function toggleDropdown() {
             var content = document.querySelector('.dropdown-content');
             content.classList.toggle('open');
         }
+
+        // Ensure the audio plays automatically on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var audio = document.getElementById('bgMusic');
+            audio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        });
     </script>
 </body>
 </html>
