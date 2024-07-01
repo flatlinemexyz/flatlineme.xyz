@@ -261,7 +261,7 @@
         </div>
     </div>
     <footer>
-        <div class="discord-icon" onclick="window.open('https://discord.com/users/717499531142496290', '_blank');"></div>
+        <a href="https://discord.com/users/717499531142496290" target="_blank"><div class="discord-icon"></div></a>
     </footer>
     <audio id="bgMusic" src="Musicbackground.mp3" loop autoplay></audio>
     <script>
@@ -286,8 +286,8 @@
             var source = audioContext.createMediaElementSource(audio);
             source.connect(analyser);
             analyser.connect(audioContext.destination);
-            analyser.fftSize = 256;
 
+            analyser.fftSize = 256;
             var bufferLength = analyser.frequencyBinCount;
             var dataArray = new Uint8Array(bufferLength);
 
