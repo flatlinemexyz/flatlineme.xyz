@@ -47,6 +47,7 @@
             box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 1;
+            animation: pulse 1s infinite;
         }
 
         .profile-pic {
@@ -210,6 +211,28 @@
                 opacity: 0;
             }
         }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .profile-container.pulse {
+            animation: pulse-fast 0.3s infinite;
+        }
+
+        @keyframes pulse-fast {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
     </style>
 </head>
 <body>
@@ -247,20 +270,40 @@
         // Ensure the audio plays automatically on page load
         document.addEventListener('DOMContentLoaded', (event) => {
             var audio = document.getElementById('bgMusic');
-            audio.play().catch(error => {
-                console.error('Audio playback failed:', error);
-            });
+            var context = new (window.AudioContext || window.webkitAudioContext)();
+            var source = context.createMediaElementSource(audio);
+            var analyser = context.createAnalyser();
+            analyser.fftSize = 256;
+            var bufferLength = analyser.frequencyBinCount;
+            var dataArray = new Uint8Array(bufferLength);
+
+            source.connect(analyser);
+            analyser.connect(context.destination);
+
+            function detectBeat() {
+                analyser.getByteFrequencyData(dataArray);
+                var sum = 0;
+                for (var i = 0; i < bufferLength; i++) {
+                    sum += dataArray[i];
+                }
+                var average = sum / bufferLength;
+
+                if (average > 150) { // Adjust threshold as needed
+                    document.querySelector('.profile-container').classList.add('pulse');
+                } else {
+                    document.querySelector('.profile-container').classList.remove('pulse');
+                }
+            }
+
+            setInterval(detectBeat, 100); // Check beat detection every 100ms
         });
 
         document.addEventListener('mousemove', function(e) {
             var circle = document.createElement('div');
-            circle.className = 'circle circle-colorful';
-            var sizeClass = ['circle-small', 'circle-medium', 'circle-large'][Math.floor(Math.random() * 3)];
-            circle.classList.add(sizeClass);
+            circle.className = 'circle circle-colorful circle-medium';
             circle.style.left = (e.pageX - 10) + 'px';
             circle.style.top = (e.pageY - 10) + 'px';
             document.body.appendChild(circle);
-
             setTimeout(function() {
                 circle.remove();
             }, 600);
