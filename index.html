@@ -191,6 +191,18 @@
             transform: scale(1.1);
         }
 
+        .terrordiscord-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .terrordiscord-link:hover {
+            text-decoration: underline;
+        }
+
         .circle {
             position: absolute;
             border-radius: 50%;
@@ -255,13 +267,14 @@
             <h2 onclick="toggleDropdown()">×͜×</h2>
             <div class="dropdown-content">
                 <ul>
-                    <li><a href="https://discord.com/users/717499531142496290">𝘿𝙄𝙎𝘾𝙊𝙍𝘿</a></li>
+                    <li><a href="https://discord.gg/terrorfibercraft">𝙏𝙀𝙍𝙍𝙊𝙍 Discord</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <footer>
-        <a href="https://discord.com/users/717499531142496290" target="_blank"><div class="discord-icon"></div></a>
+        <a href="https://discord.com/users/717499531142496290" target="_blank"><div class="discord-icon">𝘿𝙄𝙎𝘾𝙊𝙍𝘿</div></a>
+        <a href="https://discord.gg/terrorfibercraft" class="terrordiscord-link" target="_blank">𝙏𝙀𝙍𝙍𝙊𝙍</a>
     </footer>
     <audio id="bgMusic" src="Musicbackground.mp3" loop autoplay></audio>
     <script>
@@ -275,15 +288,21 @@
             var dataArray = new Uint8Array(bufferLength);
             analyserNode.getByteFrequencyData(dataArray);
 
-            var average = dataArray.reduce((a, b) => a + b, 0) / bufferLength;
-            return average > 150; // Adjust this threshold as per beat detection sensitivity
+            // Example beat detection logic (adjust as needed)
+            for (var i = 0; i < bufferLength; i++) {
+                if (dataArray[i] > 230) { // Adjust sensitivity as needed
+                    return true;
+                }
+            }
+            return false;
         }
 
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', function() {
             var audio = document.getElementById('bgMusic');
             var audioContext = new (window.AudioContext || window.webkitAudioContext)();
             var analyser = audioContext.createAnalyser();
             var source = audioContext.createMediaElementSource(audio);
+
             source.connect(analyser);
             analyser.connect(audioContext.destination);
 
