@@ -335,4 +335,39 @@
                 if (detectBeat(analyser)) {
                     document.querySelector('.profile-container').classList.add('jump');
                     document.querySelector('.profile-pic').classList.add('glow');
-                    var circle = new  feel
+                    var circle = new Image();
+                    circle.src = 'circle.png';  // Add your circle image path here
+                    circle.classList.add('circle');
+                    circle.style.left = (Math.random() * window.innerWidth) + 'px';
+                    circle.style.top = (Math.random() * window.innerHeight) + 'px';
+                    circle.style.width = circle.style.height = Math.floor(Math.random() * (30 - 10 + 1)) + 10 + 'px';  // Random size between 10px to 30px
+                    document.body.appendChild(circle);
+
+                    setTimeout(function() {
+                        circle.remove();
+                    }, 600);
+                }
+            }
+            renderFrame();
+
+            // Ensure the audio plays automatically on page load
+            audio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            var circle = document.createElement('div');
+            circle.className = 'circle';
+            circle.style.width = circle.style.height = '50px';
+            circle.style.left = (e.pageX - 25) + 'px';
+            circle.style.top = (e.pageY - 25) + 'px';
+            document.body.appendChild(circle);
+
+            setTimeout(function() {
+                circle.remove();
+            }, 600);
+        });
+    </script>
+</body>
+</html>
